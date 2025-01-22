@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #060606;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: #5f5a5aac;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: -1px 5px 36px 17px rgba(181, 33, 181, 1);
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: large;
+}
+
+#add-task-button {
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+li {
+  background-color: #111;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+li button {
+  background-color: rgb(172, 47, 9);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+  width: 20%;
+}
+ul {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul li {
+  list-style: none;
+  padding: 5px;
+}
+
+.completed {
+  text-decoration-line: line-through;
+  text-decoration-thickness: 2px;
+  color: white;
+}
+
+@media (max-width: 350px) {
+  .container {
+    padding: 20px 5px;
+  }
+
+  .input-container {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 2px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #add-task-button {
+    padding: 5px;
+  }
+}
