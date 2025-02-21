@@ -8,64 +8,66 @@
 }
 
 body{
-
     background-image: url("./Blue\ White\ One\ Photo\ Night\ Sky\ Desktop\ Wallpaper.png");
     background-position: center;
     background-size: cover;
     background-color: rgb(17, 2, 2);
-   
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-
 /* Nav Bar */
+.navbar {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 #nav-container{
     display: flex;
     align-items: center;
-    padding: 20px;
     font-family: "Nosifer", sans-serif;
-    /* justify-content: center; */
 }
 .logo-name{
     margin-left: 20px;
     font-size: 1.3rem;
     text-decoration: none;
-
 }
 
-.navbar {
-    background-color: transparent; /* Makes background transparent */
-    margin-bottom: 3rem;
-  }
-  .navbar a {
-    color:  yellow;
-  }
+.navbar a {
+    color: yellow;
+}
 
-
-
-
-  /*  Main area  */
+/*  Main area  */
 .container{
     color: #eaff00;
-    height: 100%;
     width: 100%;
-    display:  flex; 
+    max-width: 600px;
+    display: flex; 
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
+    padding: 20px;
 }
 
 .container a {
     text-decoration: none;
 }
 .websiteName{
-    font-size: 4em;
+    font-size: 3em;
     font-family: "Nosifer", sans-serif;
     color: #eaff00;
-    text-decoration: none;
 }
 .websiteName:hover{
     box-shadow: 0px 0px 10px white inset;
@@ -73,41 +75,69 @@ body{
 
 .context{
     font-family: "Nosifer", sans-serif;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2em;
 }
 .context:hover{
-    transition: all 1.5s 2s ease-in-out  ;
+    transition: all 0.5s ease-in-out;
     box-shadow: 0px 0px 10px white inset;
-    font-size: 1.5em;
     cursor: pointer;
-    
+}
+
+.search-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #search-movie{
     font-size: 1em;
-    margin-bottom: 30px;
-    padding: 12px 100px;
+    margin-bottom: 15px;
+    padding: 12px;
     border-radius: 10px;
     background-color: transparent;
     color: white;
     box-shadow: 2px 4px 10px 1px #E7FF35;
     font-weight: 700;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
 }
-.search-box{
-    display: flex;
-    flex-direction: column;
-}
-
 
 button{
     background-color: transparent;
-    padding: 10px 15px;
-    width: 40%;
-    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
     border-radius: 10px;
     box-shadow: 2px 4px 10px 1px #E7FF35;
     color: white;
     font-size: large;
     font-weight: 700;
+    cursor: pointer;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: flex-start;
+        text-align: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .websiteName {
+        font-size: 2.5em;
+    }
+    .context {
+        font-size: 1em;
+    }
+    .search-box {
+        width: 90%;
+    }
+    #search-movie, button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
