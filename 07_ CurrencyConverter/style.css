@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #191918;
+  padding: 20px;
 }
 
 .container {
@@ -17,6 +19,7 @@ body {
   border-radius: 20px;
   min-height: 60vh;
   min-width: 40vw;
+  max-width: 90vw;
 }
 
 form {
@@ -55,9 +58,9 @@ form input {
 
 .dropdown i:hover {
   border: 3px solid yellow;
-  /* -webkit-box-shadow: 1px 1px 17px 11px #3DFF88;  */
   box-shadow: 1px 1px 17px 11px #3dff88;
 }
+
 .select-container img {
   max-width: 2rem;
 }
@@ -80,6 +83,7 @@ form input {
 .msg {
   margin: 2rem 0 2rem 0;
   font-size: 2rem;
+  text-align: center;
 }
 
 form button {
@@ -89,4 +93,31 @@ form button {
   font-size: 1.15rem;
   cursor: pointer;
   border: 1px solid black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    min-width: 90%;
+    padding: 1.5rem;
+  }
+  
+  .dropdown {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .select-container {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  form input, form button {
+    font-size: 1rem;
+    height: 2.5rem;
+  }
+  
+  .msg {
+    font-size: 1.5rem;
+  }
 }
