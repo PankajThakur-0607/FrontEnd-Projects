@@ -1,6 +1,6 @@
 ## **Here is the Live Link**
 
-[Click Here](https://genuine-biscuit-b16118.netlify.app/moviepage)
+[Click Here](https://genuine-biscuit-b16118.netlify.app/)
 
 ### **Additional Information**
 
